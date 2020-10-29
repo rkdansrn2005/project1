@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+     </thead>
+
+     <tbody>
+        {% for row in rows %}
+        <tr>
+           <th>{{row.0}}</th>
+           <th>{{row.1}}</th>
+           <th>{{row.2}}</th>
+           <th>{{row.3}}</th>
+           <th>{{row.5}}</th>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+<hr>
+<a class="btn btn-default"> 글쓰기</a> 
+
+<div class="text-center">
+    <ul class="pagination">
+        {% for i in range(b) %}
+        <li><a href="#">{{ i }}</a></li>
+        {% endfor %}
+        
+    </ul>
+</div>
+</div>
+</body>
+</html>

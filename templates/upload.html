@@ -1,0 +1,44 @@
+{% extends "layout1.html" %}
+ 
+{% block content %}
+<body>
+<button  type="button" onclick = "location.href ='/file_uploaded'" >되돌아가기</button>
+
+       <!--  <p> POST 방식으로 업로드하며, enctype은 post방식으로 전달되는 객체가 어떤 형태로 encoding되어야 하는지를 의미합니다. </p>
+       <p> 또한 input에 type을 file이라고만 정의하면 알아서 잘 됩니다 하하핫.</p>
+        <p> 또한 file이 업로드되어, submit 버튼을 누르면, action 부분에 작성된 url로 넘어가게 됩니다. </p> -->
+        <form action="/file_uploaded" 
+        method="POST" enctype="multipart/form-data">
+        <h1>이미지 파일 업로드</h1>
+            <input type="file" name="image_file" />
+            <input type="submit" />
+
+        </form>
+
+       <!--  <div>
+        {% if True %}
+         <img src="{{ url_for('static', filename='E:\bs\python\ex\static\images\0)정제2.png') }}" alt=""/>
+         {% endif %}
+        </div> -->
+        <p>{{ image_files }}</p>
+        <p>{{ a }}</p>
+        
+        <form action="/file_uploaded2" 
+        method="POST" enctype="multipart/form-data">
+        <h1>file을 업로드하는 페이지입니다.</h1>
+        <h2>exel 파일 전용입니다.</h2>
+            <input type="file" name="file1" />
+            <input type="submit" />
+        </form>
+       <!--  <form action="/file_uploaded1" 
+        method="POST" enctype="multipart/form-data">
+        <h1>file을 업로드하는 페이지입니다.</h1>
+        <h2>csv 파일 전용입니다.</h2>
+            <input type="file" name="file1" />
+            <input type="submit" />
+        </form> -->
+       
+       
+    
+   </body>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout1.html" %}
+ 
+{% block content %}
+<body>
+<button  type="button" onclick = "location.href ='/uploadtext'" >초기화하기</button>
+
+       <form action="/uploadtext123" method="POST" enctype="multipart/form-data">
+
+        <h1> 긍정 부정 예측기text</h1>
+        <h3> 글씨를 써 넣어 주세요</br></h3>
+        
+        <input type="text" name="text1">
+        <button type="submit">예측하기 버튼</button>
+       </form>
+       <p>{{ textpred }}</p>
+    
+</body>
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+  <header>{% block head %}
+  	<nav>
+        <a  type="button" class="btn" onclick = "location.href ='/'">
+          <img src="../static/images/logo.png" width="auto" height="100"
+           alt="" class="logo-top">
+        </a>
+        <a type="button" class="btn" onclick = "location.href ='{{ url_for('index') }}'" >
+              <img src="../static/images/map.png" width="auto" height="75" alt="" class="link-top" style="text-align: center;">
+        </a>
+        <a type="button" class="btn" onclick = "location.href ='{{ url_for('crop')}}'" >
+            <img src="../static/images/crop_prices.png" width="auto" height="75" alt="" class="link-top" style="text-align: center;">     
+        </a>
+
+
+        <a type="button" class="btn" onclick = "location.href ='{{ url_for('about') }}'" >
+          <img src="../static/images/menu2.png" width="auto" height="100" alt="" class="link-top" style="text-align: center;">   
+        </a>
+        <a type="button" class="btn" onclick = "location.href ='{{ url_for('upload') }}'" >
+          동물 이미지 찾기
+        </a>
+        <a type="button" class="btn" onclick = "location.href ='{{ url_for('uploadtext') }}'" >
+          긍정 부정 확인기
+        </a>
+
+       
+    </nav>
+      <hr>{% endblock %}
+    </header>
+
+   <main role="main">    
+    <!-- Main content block -->
+    {% block content %}{% endblock %}
+
+    </main>
+    {% block body %}{% endblock %}
+</body>
+</html>

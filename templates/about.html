@@ -1,0 +1,109 @@
+{% extends "layout1.html" %}
+ 
+{% block content %}
+
+<body>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <div class="col-sm-12">
+    <h2>날씨 예측 정보</h2>
+    
+
+{% for aa in abcde %}
+<div class="container">
+      <div class="table-responsive">
+       <table class='table' style="margin-left: auto; margin-right: auto;">
+            <h3>{{aa.지역.0}}</h1>
+            <tr>
+              <td>날짜</td>
+              <td>평균기온(°C)</td>
+              <td>평균 상대습도(%)</td>
+              <td>최고기온(°C)</td>
+              <td>최저기온(°C)</td>
+              <td>평균 풍속(m/s)</td>
+              <td>평균 해면기압(hPa)</td>             
+              <td>평균 전운량(1/10)</td>
+              <td>강수확률</td>
+            </tr>
+            
+            <tr>
+              <td>{{aa.날짜.0}}</td>
+              <td>{{aa.평균기온.0}}</td>
+              <td>{{aa.평균상대습도.0}}</td>
+              <td>{{aa.최고기온.0}}</td>
+              <td>{{aa.최저기온.0}}</td>
+              <td>{{aa.평균풍속.0}}</td>
+              <td>{{aa.평균해면기압.0}}</td>
+              <td>{{aa.평균전운량.0}}</td>
+              <td>{{aa.강수확률.0}}</td>
+
+            </tr>            
+            <tr>
+              <td>{{aa.날짜.1}}</td>
+              <td>{{aa.평균기온.1}}</td>
+              <td>{{aa.평균상대습도.1}}</td>
+              <td>{{aa.최고기온.1}}</td>
+              <td>{{aa.최저기온.1}}</td>
+              <td>{{aa.평균풍속.1}}</td>
+              <td>{{aa.평균해면기압.1}}</td>
+              <td>{{aa.평균전운량.1}}</td>
+              <td>{{aa.강수확률.1}}</td>
+
+            </tr>
+            <tr>
+              <td>{{aa.날짜.2}}</td>
+              <td>{{aa.평균기온.2}}</td>
+              <td>{{aa.평균상대습도.2}}</td>
+              <td>{{aa.최고기온.2}}</td>
+              <td>{{aa.최저기온.2}}</td>
+              <td>{{aa.평균풍속.2}}</td>
+              <td>{{aa.평균해면기압.2}}</td>
+              <td>{{aa.평균전운량.2}}</td>
+              <td>{{aa.강수확률.2}}</td>
+
+            </tr>
+            <tr>
+              <td>{{aa.날짜.3}}</td>
+              <td>{{aa.평균기온.3}}</td>
+              <td>{{aa.평균상대습도.3}}</td>
+              <td>{{aa.최고기온.3}}</td>
+              <td>{{aa.최저기온.3}}</td>
+              <td>{{aa.평균풍속.3}}</td>
+              <td>{{aa.평균해면기압.3}}</td>
+              <td>{{aa.평균전운량.3}}</td>
+              <td>{{aa.강수확률.3}}</td>
+
+            </tr>
+            <tr>
+              <td>{{aa.날짜.4}}</td>
+              <td>{{aa.평균기온.4}}</td>
+              <td>{{aa.평균상대습도.4}}</td>
+              <td>{{aa.최고기온.4}}</td>
+              <td>{{aa.최저기온.4}}</td>
+              <td>{{aa.평균풍속.4}}</td>
+              <td>{{aa.평균해면기압.4}}</td>
+              <td>{{aa.평균전운량.4}}</td>
+              <td>{{aa.강수확률.4}}</td>
+
+            </tr>
+
+        </table> 
+         </div>
+      
+    </div>
+{% endfor %}
+         
+     
+   
+
+     
+  </div>
+  <div class="col-sm-3"></div>
+</body>
+
+{% endblock %}
+
+

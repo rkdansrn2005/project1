@@ -1,0 +1,11 @@
+{% extends "layout1.html" %}
+{% block title %} Test {% endblock %}
+<!-- {% block head %} {{ super() }} {% endblock %} -->
+
+{% block body %}
+   <!--  {% include "map.html" %} -->
+
+    {{ map | safe}}
+    
+
+{% endblock %}
